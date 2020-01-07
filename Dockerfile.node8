@@ -1,0 +1,6 @@
+FROM node:8.0.0
+
+RUN apt-get update && apt-get -y install openssh-client \
+           && apt-get install sshpass
+
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
